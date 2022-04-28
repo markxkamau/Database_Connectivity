@@ -6,9 +6,9 @@ public class JDBC_Connection {
         app.connect();
         
         Data_Input data = new Data_Input();
-//        data.connect();
+       data.connect();
         System.out.println(data.properCase("tHIS iS tHE acTOR lISt"));
-//        System.out.println(data.getDetail("Hello World"));
+       System.out.println(data.getDetail("Hello World"));
     }
     
 }
