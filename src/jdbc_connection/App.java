@@ -8,7 +8,7 @@ public class App {
     
     private final String url = "jdbc:postgresql://localhost/security";
     private final String user = "postgres";
-    private final String password = "Mclaren001";
+    private final String password = "password";
     
     public Connection connect(){
         Connection conn = null;
