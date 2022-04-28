@@ -8,7 +8,7 @@ public class Data_Input {
         Connection conn = null;
         
         try{
-            conn= DriverManager.getConnection("jdbc:postgresql://localhost/security", "postgres", "Mclaren001");
+            conn= DriverManager.getConnection("jdbc:postgresql://localhost/security", "postgres", "password");
             System.out.println("Connetion to server successfull");
             
         }catch(SQLException e){
@@ -30,18 +30,18 @@ public class Data_Input {
         }
         return result;
     }
-//    public String getDetail(String s){
-//        String result = s;
-//        String SQL = "Call getDetails()";
-//        try(Connection conn = this.connect(); CallableStatement cstmt = conn.prepareCall(SQL)){
-//            cstmt.registerOutParameter(SQL, Types.JAVA_OBJECT);
-//            cstmt.execute();
-//            result = cstmt.getString(1);
-//        }
-//        catch(SQLException e){
-//            System.out.println(e.getMessage());
-//        }
-//        return result;
-//    }
+   public String getDetail(String s){
+       String result = s;
+       String SQL = "Call getDetails()";
+       try(Connection conn = this.connect(); CallableStatement cstmt = conn.prepareCall(SQL)){
+           cstmt.registerOutParameter(SQL, Types.JAVA_OBJECT);
+           cstmt.execute();
+           result = cstmt.getString(1);
+       }
+       catch(SQLException e){
+           System.out.println(e.getMessage());
+       }
+       return result;
+   }
     
 }
